@@ -1,0 +1,44 @@
+﻿@model CreateEmployeeVM
+@{
+	ViewData["Title"] = "Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card" style="width: 28rem; background-color:beige">
+	<div class="card-body">
+		<form asp-action="Create" asp-controller="Employee" enctype="multipart/form-data">
+			<label>Name</label>
+			<input type="text" asp-for="Name" class="form-control" placeholder="enter Name" />
+			<span asp-validation-for="Name"></span>
+			<br />
+			<label>Age</label>
+			<input type="text" asp-for="Age" class="form-control" placeholder="enter Age" />
+			<span asp-validation-for="Age"></span>
+			<br />
+			<label>Email</label>
+			<input type="email" asp-for="Email" class="form-control" placeholder="enter Email" />
+			<span asp-validation-for="Email"></span>
+			<br />
+			<label>Image</label>
+			<input type="file" asp-for="ImageName" class="form-control" placeholder="enter Image" />
+			<br />
+			<label for="items">Choose an Department:</label>
+			<select id="items" asp-for="DeptId">
+				<option value="1">Lecutcher_iti</option>
+				<option value="2">FrontEndDeveloper</option>
+				<option value="3">BackEndDevelober</option>
+				<option value="4">Ui_ux</option>
+			</select>
+
+			<br />
+			<label>Salary</label>
+			<input type="text" asp-for="Salary" class="form-control" placeholder="enter Salary" />
+			<span asp-validation-for="Salary"></span>
+			<br />
+			<button type="submit" class="btn btn-primary">Send</button>
+			<a asp-action="Index" asp-controller="Home" asp-route-id="1" class="btn btn-danger">Cansel</a>
+		</form>
+
+	</div>
+</div>
+

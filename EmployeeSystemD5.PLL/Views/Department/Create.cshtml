@@ -1,0 +1,22 @@
+﻿@model CreateDpertVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card" style="width: 20rem; background-color:beige">
+    <div class="card-body">
+        <form asp-action="Create" asp-controller="Department">
+            <label>DepartName</label>
+            <br />
+            <br />
+            <input type="text" asp-for="Name" value="" placeholder="Enter Your Name" />
+            <br />
+            <span asp-validation-for="Name"></span>
+            <br />
+            <button type="submit" class="btn btn-primary">Create</button>
+            @* <a asp-action="Index" asp-controller="Home" asp-route-id="1" class="btn btn-danger">Cansel</a> *@
+        </form>
+    </div>
+</div>

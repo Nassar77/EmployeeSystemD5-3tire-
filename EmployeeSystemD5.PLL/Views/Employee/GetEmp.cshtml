@@ -1,0 +1,22 @@
+﻿@model int
+@{
+	ViewData["Title"] = "GetEmp";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+
+
+	<div class="card" style="width: 20rem; background-color:beige ;margin-bottom:150px; ">
+		<div class="card-body">
+			<form asp-action="Get" asp-controller="Employee" method="get">
+				<div class="input-group rounded">
+					<input type="search" class="form-control rounded" name="id" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+					<button type="submit" class="btn btn-outline-primary" data-mdb-ripple-init="">search</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+</div>

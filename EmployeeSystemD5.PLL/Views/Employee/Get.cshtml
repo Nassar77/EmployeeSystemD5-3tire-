@@ -1,0 +1,20 @@
+﻿@model GetByIdEmployeeVM
+@{
+	ViewData["Title"] = "Get";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+	<div class="card" style="width: 30rem;">
+		<img src="/Image/Profile/@Model.Image"" class="card-img-top"  alt="Hidden">
+		<div class="card-body">
+			<h5 class="card-title">CV</h5>
+			<p class="card-text">Name: @Model.Name</p>
+			<p class="card-text">Age: @Model.Age</p>
+			<p class="card-text">Email: @Model.Email</p>
+			<p class="card-text">DepartmentName: @Model.DepartmentName</p>
+			
+		</div>
+	</div>
+</div>
+
